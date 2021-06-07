@@ -1,0 +1,3 @@
+/home/satyamedh/satyaos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/satyamedh/satyaos/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/satyamedh/satyaos/cmake-build-debug/CMakeFiles/satyaos.dir

@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/satyaos.dir/src/kernel.c.o -o satyaos 
