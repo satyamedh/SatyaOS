@@ -4,7 +4,7 @@
 #include <string.h>
 #include <kernel/tty.h>
 
-#include "vga.h"
+#include "../../include/kernel/vga.h"
 
 static const size_t VGA_WIDTH = 80;
 static const size_t VGA_HEIGHT = 25;
@@ -15,10 +15,10 @@ static size_t terminal_column;
 static uint8_t terminal_color;
 static uint16_t* terminal_buffer;
 
-void terminal_initialize(void) {
+void terminal_initialize(enum vga_color fg, enum vga_color bg) {
 	terminal_row = 0;
 	terminal_column = 0;
-	terminal_color = vga_entry_color(VGA_COLOR_LIGHT_GREY, VGA_COLOR_BLACK);
+	terminal_color = vga_entry_color(fg, bg);
 	terminal_buffer = VGA_MEMORY;
 	for (size_t y = 0; y < VGA_HEIGHT; y++) {
 		for (size_t x = 0; x < VGA_WIDTH; x++) {
